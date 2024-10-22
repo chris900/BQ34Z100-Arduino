@@ -35,10 +35,14 @@ void loop() {
   int stateOfCharge = batteryManager->getSOC();
   int stateOfHealth = batteryManager->getStateOfHealth();
   int loadCurrent = batteryManager->getCurrent();
+  int batteryVoltage = batteryManager->getVoltage();
+  int temperature = batteryManager->getTemperature();
 
   Serial.printf("Charge Level: %d%%\n", stateOfCharge);
   Serial.printf("Battery Health: %d%%\n", stateOfHealth);
   Serial.printf("Load Current: %d mA\n", loadCurrent);
+  Serial.printf("Battery Voltage: %d mA\n", batteryVoltage);
+  Serial.printf("Temperature: %d mA\n\n", temperature);
 
   delay(1000); // Wait for 1 second before the next reading
 }
